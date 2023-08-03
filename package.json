@@ -1,18 +1,18 @@
 {
-  "name": "retron",
+  "name": "magicbox",
   "version": "1.0.0",
   "description": "ViteJS + Electron + React + Material-UI Template",
-  "homepage": "https://github.com/jooy2/retron",
-  "author": "jooy2 <jooy2.contact@gmail.com>",
+  "homepage": "https://github.com/whp98/magicbox",
+  "author": "whp98",
   "license": "MIT",
   "main": "dist/main/index.js",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/jooy2/retron.git"
+    "url": "https://github.com/whp98/magicbox.git"
   },
   "bugs": {
-    "url": "https://github.com/jooy2/retron/issues"
+    "url": "https://github.com/whp98/magicbox/issues"
   },
   "scripts": {
     "dev": "vite",
