@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { AlertColor, Divider, FormControlLabel, Stack, Switch } from '@mui/material';
 import Alert from '@mui/material/Alert';
-import PageLayout from '../components/pageLayout/PageLayout';
+import PageLayout from '@/renderer/components/layout/PageLayout';
 
 const FileRename: React.FunctionComponent = () => {
   const handleSelectDir = async (): Promise<void> => {

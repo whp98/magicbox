@@ -3,35 +3,13 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '@/renderer/store';
-import { setDarkTheme } from '@/renderer/store/slices/appScreenSlice';
 import { MdLightMode, MdModeNight } from 'react-icons/md';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { AppBar, Box, IconButton, Toolbar, Typography } from '@mui/material';
+import { RootState } from '@/renderer/store';
+import { setDarkTheme } from '@/renderer/store/slices/appScreenSlice';
 import SidebarData from './SidebarData';
 
-const Navbar = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 56px;
-  background-color: #000080;
-`;
-
-const MenuIconOpen = styled(Link)`
-  display: flex;
-  justify-content: start;
-  font-size: 1.5rem;
-  margin-left: 2rem;
-  color: #ffffff;
-`;
-const DarkModeIcon = styled(Link)`
-  display: flex;
-  justify-content: start;
-  font-size: 1.5rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  color: #ffffff;
-`;
 const MenuIconClose = styled(Link)`
   display: flex;
   justify-content: end;
@@ -65,7 +43,7 @@ const MenuItemLinks = styled(Link)`
   display: flex;
   align-items: center;
   padding: 0 2rem;
-  font-size: 20px;
+  font-size: 15px;
   text-decoration: none;
   color: #ffffff;
 
@@ -91,14 +69,35 @@ const Sidebar: React.FunctionComponent = () => {
   const showSidebar = () => setClose(!close);
   return (
     <>
-      <Navbar>
-        <MenuIconOpen to="#" onClick={showSidebar}>
-          <FaBars />
-        </MenuIconOpen>
-        <DarkModeIcon to="#" onClick={handleChangeTheme}>
-          {darkTheme ? <MdLightMode /> : <MdModeNight />}
-        </DarkModeIcon>
-      </Navbar>
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar position="static">
+          <Toolbar>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+              onClick={showSidebar}
+            >
+              <FaBars />
+            </IconButton>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Magic Box
+            </Typography>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+              onClick={handleChangeTheme}
+            >
+              {darkTheme ? <MdLightMode /> : <MdModeNight />}
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+      </Box>
       <SidebarMenu $close={close}>
         <MenuIconClose to="#" onClick={showSidebar}>
           <FaTimes />

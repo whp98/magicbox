@@ -8,7 +8,7 @@ const SidebarData = [
     icon: <FaRegChartBar />,
   },
   {
-    title: '文件重命名工具',
+    title: '文件重命名',
     path: '/fileRename',
     icon: <FaHome />,
   },

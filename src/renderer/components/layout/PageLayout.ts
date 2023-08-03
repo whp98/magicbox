@@ -6,8 +6,7 @@ const PageLayout = styled.div`
   justify-content: center;
   font-size: 50px;
   height: 70vh;
-  padding: 100px;
-  //padding-left: 20%;
-  //padding-top: 56px;
+  padding-left: 20%;
+  padding-top: 70px;
 `;
 export default PageLayout;

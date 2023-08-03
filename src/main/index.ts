@@ -1,6 +1,6 @@
+import { join } from 'path';
 import { app, BrowserWindow, systemPreferences } from 'electron';
 
-import { join } from 'path';
 import IPCs from './IPCs';
 
 type DeepWriteable<T> = { -readonly [P in keyof T]: DeepWriteable<T[P]> };
@@ -19,8 +19,10 @@ const exitApp = (): void => {
 
 const createWindow = async () => {
   mainWindow = new BrowserWindow({
-    width: global.IS_DEV ? 1300 : 720,
-    height: 540,
+    width: global.IS_DEV ? 1400 : 1400,
+    height: 600,
+    frame: true, // 取消window自带的关闭最小化等
+    resizable: false, // 禁止改变主窗口尺寸
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,

@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 import { increaseCount, setDarkTheme, setVersion } from '@/renderer/store/slices/appScreenSlice';
 import { bodyRoot, jumbo } from '@/renderer/assets/css/global';
 import type { RootState } from '@/renderer/store';
-import PageLayout from '../components/pageLayout/PageLayout';
+import PageLayout from '@/renderer/components/layout/PageLayout';
 
 const Arch = () => {
   const darkTheme = useSelector((state: RootState) => state.appScreen.darkTheme);
