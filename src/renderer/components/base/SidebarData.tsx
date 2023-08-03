@@ -1,21 +1,16 @@
 import React from 'react';
-import { FaGrimace, FaHome, FaRegChartBar } from 'react-icons/fa';
+import { MdDriveFileMove, MdHome } from 'react-icons/md';
 
 const SidebarData = [
   {
     title: '主页',
     path: '/',
-    icon: <FaRegChartBar />,
+    icon: <MdHome />,
   },
   {
     title: '文件重命名',
     path: '/fileRename',
-    icon: <FaHome />,
-  },
-  {
-    title: '错误404',
-    path: '/404',
-    icon: <FaGrimace />,
+    icon: <MdDriveFileMove />,
   },
 ];
 export default SidebarData;

@@ -1,23 +1,24 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React from 'react';
 import Err404 from '@/renderer/pages/Err404';
-import Arch from './pages/Arch';
 
-import Sidebar from './components/base/Sidebar';
+import NavLayout from '@/renderer/components/layout/NavLayout';
+import Home from '@/renderer/pages/Home';
 
 import FileRename from './pages/FileRename';
 
 const App: React.FunctionComponent = () => (
   // eslint-disable-next-line react/jsx-no-useless-fragment
   <>
-    <HashRouter>
-      <Sidebar />
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Arch />} />
-        <Route index path="/fileRename" element={<FileRename />} />
-        <Route path="/404" element={<Err404 />} />
+        <Route path="/" element={<NavLayout />}>
+          <Route index element={<Home />} />
+          <Route path="fileRename" element={<FileRename />} />
+        </Route>
+        <Route path="*" element={<Err404 />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   </>
 );
 
