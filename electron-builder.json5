@@ -3,7 +3,8 @@
   appId: 'work.jsfr.magicbox',
   asar: true,
   extends: null,
-  "compression": "maximum",
+  //"compression": "maximum",
+  compression: 'normal',
   copyright: 'ⓒ 2023 ${author}',
   artifactName: '${productName}_v${version}_${arch}.${ext}',
   directories: {
