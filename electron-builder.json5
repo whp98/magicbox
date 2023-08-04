@@ -3,12 +3,12 @@
   appId: 'work.jsfr.magicbox',
   asar: true,
   extends: null,
-  compression: 'normal',
+  "compression": "maximum",
   copyright: 'ⓒ 2023 ${author}',
-  artifactName: '${productName} ${version}_${arch}.${ext}',
+  artifactName: '${productName}_v${version}_${arch}.${ext}',
   directories: {
     buildResources: './buildAssets/installer/',
-    output: './release/${version}'
+    output: './release/'
   },
   files: [
     'dist/**/*',
@@ -24,11 +24,11 @@
       {
         target: 'zip',
         arch: 'x64'
+      },
+      {
+        target: 'portable',
+        arch: 'x64'
       }
-      //      {
-      //        target: 'portable',
-      //        arch: 'x64'
-      //      },
       //      {
       //        target: 'nsis',
       //        arch: 'x64'
@@ -37,7 +37,7 @@
     icon: './buildAssets/installer/icon.ico'
   },
   portable: {
-    artifactName: '${productName} ${version} Portable.${ext}'
+    artifactName: '${productName}_v${version}_${arch}_Portable.${ext}'
   },
   nsis: {
     oneClick: true
