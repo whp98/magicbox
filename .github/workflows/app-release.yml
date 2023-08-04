@@ -75,7 +75,6 @@ jobs:
           prerelease: false
       # 上传至release的资源
       - name: Upload Release Windows Portable Asset
-        id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -86,7 +85,6 @@ jobs:
           asset_content_type: application/vnd.microsoft.portable-executable #资源类型
       # 上传至release的资源
       - name: Upload Release Windows zip Asset
-        id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
