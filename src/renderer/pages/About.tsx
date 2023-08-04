@@ -7,7 +7,7 @@ import { bodyRoot } from '@/renderer/assets/css/global';
 import type { RootState } from '@/renderer/store';
 import PageLayout from '@/renderer/components/layout/PageLayout';
 
-const Home = () => {
+const About = () => {
   // const darkTheme = useSelector((state: RootState) => state.appScreen.darkTheme);
   const appVersion = useSelector((state: RootState) => state.appScreen.version);
   // const counterValue = useSelector((state: RootState) => state.appScreen.counterValue);
@@ -15,7 +15,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const handleGithubLink = async (): Promise<void> => {
-    await window.mainApi.send('msgOpenExternalLink', 'https://github.com/whp98/');
+    await window.mainApi.send('msgOpenExternalLink', 'https://github.com/whp98/magicbox');
   };
 
   useEffect(() => {
@@ -54,4 +54,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About;
