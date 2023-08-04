@@ -20,7 +20,7 @@ import { styled, useTheme } from '@mui/material/styles';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 import { RootState } from '@/renderer/store';
 import { setDarkTheme } from '@/renderer/store/slices/appScreenSlice';
-import SidebarData from '@/renderer/components/base/SidebarData';
+import SidebarData from '@/renderer/components/router/SidebarData';
 
 const drawerWidth = 240;
 

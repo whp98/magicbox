@@ -17,22 +17,22 @@
   ],
   win: {
     target: [
-      {
-        target: 'appx',
-        arch: 'x64'
-      },
+      //      {
+      //        target: 'appx',
+      //        arch: 'x64'
+      //      },
       {
         target: 'zip',
         arch: 'x64'
-      },
-      {
-        target: 'portable',
-        arch: 'x64'
-      },
-      {
-        target: 'nsis',
-        arch: 'x64'
       }
+      //      {
+      //        target: 'portable',
+      //        arch: 'x64'
+      //      },
+      //      {
+      //        target: 'nsis',
+      //        arch: 'x64'
+      //      }
     ],
     icon: './buildAssets/installer/icon.ico'
   },
@@ -41,42 +41,42 @@
   },
   nsis: {
     oneClick: true
-  },
-  mac: {
-    bundleVersion: '1.0',
-    identity: null,
-    hardenedRuntime: true,
-    gatekeeperAssess: false,
-    icon: 'buildAssets/installer/icon.icns',
-    type: 'distribution',
-    target: [
-      {
-        target: 'dmg',
-        arch: [
-          'x64',
-          'arm64',
-          'universal'
-        ]
-      }
-    ]
-  },
-  linux: {
-    executableName: 'magicbox',
-    icon: 'buildAssets/installer',
-    category: 'Utility',
-    target: [
-      {
-        target: 'snap',
-        arch: 'x64'
-      },
-      {
-        target: 'deb',
-        arch: 'x64'
-      },
-      {
-        target: 'rpm',
-        arch: 'x64'
-      }
-    ]
   }
+  //  mac: {
+  //    bundleVersion: '1.0',
+  //    identity: null,
+  //    hardenedRuntime: true,
+  //    gatekeeperAssess: false,
+  //    icon: 'buildAssets/installer/icon.icns',
+  //    type: 'distribution',
+  //    target: [
+  //      {
+  //        target: 'dmg',
+  //        arch: [
+  //          'x64',
+  //          'arm64',
+  //          'universal'
+  //        ]
+  //      }
+  //    ]
+  //  },
+  //  linux: {
+  //    executableName: 'magicbox',
+  //    icon: 'buildAssets/installer',
+  //    category: 'Utility',
+  //    target: [
+  //      {
+  //        target: 'snap',
+  //        arch: 'x64'
+  //      },
+  //      {
+  //        target: 'deb',
+  //        arch: 'x64'
+  //      },
+  //      {
+  //        target: 'rpm',
+  //        arch: 'x64'
+  //      }
+  //    ]
+  //  }
 }

@@ -1,6 +1,6 @@
-import { Outlet } from 'react-router-dom';
-import React from 'react';
-import Sidebar from '@/renderer/components/base/Sidebar';
+import { Outlet } from "react-router-dom";
+import React from "react";
+import Sidebar from "@/renderer/components/router/Sidebar";
 
 /** 导航页面布局 */
 function NavLayout() {

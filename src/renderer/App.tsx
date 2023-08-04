@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import React from 'react';
 import Err404 from '@/renderer/pages/Err404';
 
@@ -10,7 +10,7 @@ import FileRename from './pages/FileRename';
 const App: React.FunctionComponent = () => (
   // eslint-disable-next-line react/jsx-no-useless-fragment
   <>
-    <BrowserRouter>
+    <MemoryRouter>
       <Routes>
         <Route path="/" element={<NavLayout />}>
           <Route index element={<Home />} />
@@ -18,7 +18,7 @@ const App: React.FunctionComponent = () => (
         </Route>
         <Route path="*" element={<Err404 />} />
       </Routes>
-    </BrowserRouter>
+    </MemoryRouter>
   </>
 );
 

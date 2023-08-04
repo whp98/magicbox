@@ -1,11 +1,11 @@
 import React from 'react';
-import { MdDriveFileMove, MdHome } from 'react-icons/md';
+import { MdDriveFileMove, MdInfo } from 'react-icons/md';
 
 const SidebarData = [
   {
-    title: '主页',
+    title: '关于',
     path: '/',
-    icon: <MdHome />,
+    icon: <MdInfo />,
   },
   {
     title: '文件重命名',
