@@ -13,7 +13,7 @@ const SidebarData = [
     icon: <MdDriveFileMove />,
   },
   {
-    title: '汽水音乐歌单',
+    title: '汽水音乐歌单导出',
     path: '/qishui',
     icon: <MdLibraryMusic />,
   },

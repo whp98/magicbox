@@ -115,7 +115,7 @@ const Sidebar: React.FunctionComponent<Props> = ({ children }) => {
             <MdMenu />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            MagicBox · {subTitle}
+            MagicBox · {subTitle || '主页'}
           </Typography>
           <IconButton
             size="large"
