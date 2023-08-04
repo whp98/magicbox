@@ -26,6 +26,7 @@ const createWindow = async () => {
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
+      webSecurity: false,
       devTools: global.IS_DEV,
       preload: join(__dirname, '../preload/index.js'),
     },

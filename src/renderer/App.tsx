@@ -5,6 +5,7 @@ import Err404 from '@/renderer/pages/Err404';
 import NavLayout from '@/renderer/components/layout/NavLayout';
 import About from '@/renderer/pages/About';
 
+import Qishui from '@/renderer/pages/Qishui';
 import FileRename from './pages/FileRename';
 
 const App: React.FunctionComponent = () => (
@@ -15,6 +16,7 @@ const App: React.FunctionComponent = () => (
         <Route path="/" element={<NavLayout />}>
           <Route index element={<About />} />
           <Route path="fileRename" element={<FileRename />} />
+          <Route path="qishui" element={<Qishui />} />
         </Route>
         <Route path="*" element={<Err404 />} />
       </Routes>

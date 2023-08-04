@@ -87,6 +87,7 @@ const Sidebar: React.FunctionComponent<Props> = ({ children }) => {
   const darkTheme = useSelector((state: RootState) => state.appScreen.darkTheme);
   const dispatch = useDispatch();
   const [isOpen, setIsOpen] = React.useState(false);
+  const [subTitle, setSubTitle] = React.useState('');
 
   const handleDrawerOpen = () => {
     setIsOpen(true);
@@ -114,7 +115,7 @@ const Sidebar: React.FunctionComponent<Props> = ({ children }) => {
             <MdMenu />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Magic Box
+            MagicBox · {subTitle}
           </Typography>
           <IconButton
             size="large"
@@ -153,6 +154,7 @@ const Sidebar: React.FunctionComponent<Props> = ({ children }) => {
               <ListItemButton
                 onClick={() => {
                   navigate(item.path);
+                  setSubTitle(item.title);
                 }}
               >
                 <ListItemIcon>{item.icon}</ListItemIcon>
